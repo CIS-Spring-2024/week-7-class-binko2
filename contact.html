@@ -56,21 +56,24 @@
     <div id="d01"> 
         <fieldset>
             <legend> Contact Info </legend>
-            Name: <input type="text" placeholder=" " id="fname" required>
+            Name: <input type="text" placeholder=" " id="name" required>
             <br> <br>
-            Phone: <input type="text" placeholder=" " id="phone" required>
+            Phone: <input type="tel" placeholder=" " id="phone" required>
             <br> <br>
-            Email: <input type="text" placeholder=" " id="email" required>
+            Email: <input type="email" placeholder=" " id="email" required>
             <br> <br>
-            Password: <input type="text" placeholder=" " id="password" required>
+            Password: <input type="password" placeholder=" " id="password" required>
             <br> <br>
             Date of Birth: <input type="date">
             <br> <br>
             Preferred Contact Method:
-            <input type="radio" name="r01"> Email
-            <input type="radio" name="r01"> Phone
+            <div class="radio-group"> 
+            <input type="radio" name="r01" id="contact_email" value="Email"> Email
+            <input type="radio" name="r01" id="contact_phone" value="Phone"> Phone
+            </div>
+
             <br> <br>
-            <button type="submit" id="submitbutton"> Submit </button>
+            <button type="submit" id="submitbutton"> Submit </button> 
         </fieldset>
     </div>
 </form>
@@ -120,7 +123,7 @@
     // Add an event listener to the "Submit" button to log a message when it is clicked
     document.querySelector('button[type="submit"]').addEventListener('click', function(e) {
         e.preventDefault();  // Prevent the form from submitting
-        alert('submit the form for processig now?');
+        alert('Submit the form for processing now?');
     });
 
 </script>
